@@ -4,4 +4,3 @@
 
 export * from './components/ngx-formulario/ngx-formulario.component';
 export * from './components/ngx-formulario/ngx-formulario.module';
-
