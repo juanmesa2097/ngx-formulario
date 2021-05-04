@@ -42,6 +42,46 @@
           }
         }
       }
+    },
+    "addon-events": {
+      "projectType": "library",
+      "root": "projects/addon-events",
+      "sourceRoot": "projects/addon-events/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/addon-events/tsconfig.lib.json",
+            "project": "projects/addon-events/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/addon-events/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/addon-events/src/test.ts",
+            "tsConfig": "projects/addon-events/tsconfig.spec.json",
+            "karmaConfig": "projects/addon-events/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/addon-events/tsconfig.lib.json",
+              "projects/addon-events/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "core"

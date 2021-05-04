@@ -4,6 +4,10 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
+      "addon-events": [
+        "dist/addon-events/addon-events",
+        "dist/addon-events"
+      ],
       "core": [
         "dist/core/core",
         "dist/core"
